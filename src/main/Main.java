@@ -1,67 +1,63 @@
 package main;
 
+
 import main.Basic_algorithms.Binary_Search;
+import main.Basic_algorithms.Depth_First_Search;
 import main.Basic_algorithms.Linear_Search;
+import main.Basic_algorithms.Recursion_algo;
 import main.Basic_algorithms.Two_Pointers;
+import main.MyAlgos.PrintTable;
+import main.ObjectClass.TreeNode;
 
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("--------Main Started--------");
-		//----------------------{ 0, 1, 2, 3, 4, 5,  6,  7 };
-		int[] array = new int[] { 1, 2, 4, 6, 9, 9, 61, 85 };
+		System.out.println("--------App Started--------");
 		
+		/* ------    Array Used     -------*/
+//		int[] array = new int[] { 1, 2, 4, 6, 9, 9, 61, 85 };
+		int[] array = new int[] { 6,18,12,19,19,20 };
 		System.out.print("Array: [ ");
 		for(int i=0; i<array.length; i++) {
 			System.out.print(array[i]+" ");
 		}
 		System.out.println(" ]");
 		
+		
+		/* ------     Tree Used     -------*/
+		TreeNode root = new TreeNode(30);
+		root.left = new TreeNode(20);
+		root.left.left = new TreeNode(10);
+		root.left.right = new TreeNode(32);
+		root.left.left.right= new TreeNode(34);
+		root.right = new TreeNode(3);
+		
+		
+		
+		
 		/* OVERVIEW */
 		
 //		1.	LINEAR SEARCH
-//		Linear_Search.findElement(array, 5);
+//		Linear_Search.findElement(array, 8);
+		
 //		2.	BINARY SEARCH
-//		ind = Binary_Search.findElement(array,85);
-
+//		Binary_Search.findElement(array,20);
 		
+//		3. TWO POINTERS
+//		Two_Pointers.findTwoElements(array, 38);
 		
+//		4. RECURSION
+//		Recursion_algo.calcSum(100);
 		
-
-		/*---------------------Linear Search Starts--------------------------*/
-
-//		When single element is present
-		Linear_Search.findElement(array, 5);
-
-//		When multiple elements are present
-//		linearSearch.findElement(array, 6);
-
-//		When element is not present
-//		linearSearch.findElement(array, 10);
-		/*---------------------Linear Search Ends--------------------------*/
-
-		/*---------------------Binary Search Ends--------------------------*/
-//		When single element is present in last
-		Binary_Search.findElement(array,85);
-
-//		When multiple elements are present
-//		ind = Binary_Search.findElement(array,9);
-
-//		When element is not present
-//		ind = Binary_Search.findElement(array, 5);		
-		/*---------------------Binary Search Ends--------------------------*/
+//		5. DEPTH FIRST SEARCH
+//		System.out.println("\n-------(inOrder)-------");
+//		Depth_First_Search.inOrder(root);
 		
-		/*---------------------Two Pointer Starts--------------------------*/
-//		When single element is present
-		Two_Pointers.findTwoElements(array, 5);
-
-//		When multiple elements are present
-//		linearSearch.findElement(array, 6);
-
-//		When element is not present
-//		linearSearch.findElement(array, 10);
-		/*---------------------Two Pointer Ends--------------------------*/
+//		System.out.println("\n-------(preOrder)-------");
+//		Depth_First_Search.preOrder(root);
+		
+//		7. Print a Table of any numbers
+//		PrintTable.table(29);
 	}
 
 }

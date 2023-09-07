@@ -6,7 +6,7 @@ public class Binary_Search {
 	public static void findElement(int[] array, int element) {
 		int low = 0, ind = 0;
 		int high = array.length;
-		
+
 		System.out.println("\n-------(Binary Search)-------");
 
 		while (low <= high) {
@@ -14,6 +14,7 @@ public class Binary_Search {
 
 			if (array[mid] == element) {
 				ind = mid;
+				System.out.println("Element '" + element + "' present at index: " + ind);
 				break;
 			} else if (array[mid] < element) {
 				low = mid + 1;
@@ -21,12 +22,7 @@ public class Binary_Search {
 				high = mid - 1;
 
 		}
-		ind = -1;
-
-		if (ind != -1) {
-			System.out.println("Element present at index: " + ind);
-		} else {
-			System.out.println("Element '"+element +"' not prensent in array!");
-		}
+		if (ind == 0)
+			System.out.println("Element '" + element + "' not prensent in array!");
 	}
 }

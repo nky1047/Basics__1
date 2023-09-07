@@ -24,7 +24,7 @@ public class Linear_Search {
 			}
 
 			if (i == array.length - 1) /* Element to search isn't present */
-				System.out.println("-->'" + element + "' isn't present in array.");
+				System.out.println("Element '" + element + "' isn't present.");
 		}
 	}
 }
