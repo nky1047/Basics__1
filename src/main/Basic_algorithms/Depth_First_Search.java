@@ -10,7 +10,7 @@ public class Depth_First_Search {
 			return;
 		}
 		inOrder(root.left);
-		System.out.print("-->"+root.key+ " ");
+		System.out.print(""+root.key+ " ");
 		inOrder(root.right);
 	}
 	

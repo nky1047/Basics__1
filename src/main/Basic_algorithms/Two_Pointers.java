@@ -4,7 +4,15 @@ public class Two_Pointers {
 	public static void findTwoElements(int[] array, int target) {
 
 		System.out.println("\n-------(Two_Pointers)-------");
-
+		/* ----Algorithm ----
+		 * left = start, right = end
+		 * { while left < right
+		 * 		find sum of element at left and right indices.
+		 * 		if (sum == target) --> return the sum
+		 * 		if (sum < target ) --> increament the left
+		 * 		if (sum > target ) --> decreament the right
+		 * }
+		 * */
 		int left = 0;
 		int right = array.length - 1;
 		int[] pointers = { 0, 0 };
